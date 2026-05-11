@@ -1,0 +1,56 @@
+aid: taskcall
+name: TaskCall
+description: >-
+  TaskCall is an incident management and on-call alerting platform for DevOps,
+  SRE, and IT teams that centralizes alerts from monitoring tools, manages
+  on-call schedules, escalation policies, status pages, and post-incident
+  analysis. The platform provides automated incident triggers, integrations
+  with monitoring and ITSM tools, and IP-restricted API key access. TaskCall
+  exposes a REST API for managing incidents and related resources using
+  token-based authentication.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Incident Management
+  - On-Call
+  - Alerting
+  - DevOps
+  - SRE
+  - ITSM
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/taskcall/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: taskcall:incidents-api
+    name: TaskCall Incidents API
+    description: >-
+      REST API for creating, updating, and managing incidents in TaskCall.
+      Authentication uses API keys passed in the Authorization header as
+      "Authorization: token <api_key>", with optional IP allowlisting for
+      additional security.
+    humanURL: https://docs.taskcallapp.com/api-access/v1/incidents-api
+    baseURL: https://incidents-api.taskcallapp.com
+    tags:
+      - Incidents
+      - Alerts
+      - Triggers
+    properties:
+      - type: Documentation
+        url: https://docs.taskcallapp.com/api-access/v1/incidents-api
+      - type: API Keys
+        url: https://taskcallapp.com/docs/api-access/v1/api-keys
+
+common:
+  - type: Website
+    url: https://taskcallapp.com/
+  - type: Documentation
+    url: https://docs.taskcallapp.com/
+  - type: Pricing
+    url: https://taskcallapp.com/pricing/
+  - type: Sign Up
+    url: https://app.us.taskcallapp.com/signup
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
