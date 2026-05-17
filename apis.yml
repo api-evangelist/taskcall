@@ -49,7 +49,7 @@ common:
     url: https://docs.taskcallapp.com/
   - type: Pricing
     url: https://taskcallapp.com/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://app.us.taskcallapp.com/signup
 maintainers:
   - FN: Kin Lane
