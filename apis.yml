@@ -43,6 +43,10 @@ apis:
         url: https://taskcallapp.com/docs/api-access/v1/api-keys
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/taskcallapp
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/taskcall
   - type: Website
     url: https://taskcallapp.com/
   - type: Documentation
