@@ -55,6 +55,8 @@ common:
     url: https://taskcallapp.com/pricing/
   - type: SignUp
     url: https://app.us.taskcallapp.com/signup
+  - type: LLMsTxt
+    url: https://docs.taskcallapp.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
