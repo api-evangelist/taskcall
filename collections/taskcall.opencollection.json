@@ -1,0 +1,305 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TaskCall Incidents API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Components",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List components",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://incidents-api.taskcallapp.com/list/:componentType",
+            "params": [
+              {
+                "name": "componentType",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve component lists (users, policies, services, etc.)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Incidents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create incident",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/create"
+          },
+          "docs": "Trigger a new incident."
+        },
+        {
+          "info": {
+            "name": "List incidents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/list"
+          },
+          "docs": "List incidents with optional filters."
+        },
+        {
+          "info": {
+            "name": "Get incident details",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/details"
+          },
+          "docs": "Get incident details"
+        },
+        {
+          "info": {
+            "name": "Get incident alerts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/alerts"
+          },
+          "docs": "Retrieve alerts for an incident."
+        },
+        {
+          "info": {
+            "name": "Acknowledge incident",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/acknowledge"
+          },
+          "docs": "Acknowledge an open incident."
+        },
+        {
+          "info": {
+            "name": "Resolve incident",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/resolve"
+          },
+          "docs": "Resolve incident"
+        },
+        {
+          "info": {
+            "name": "Escalate incident",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/escalate"
+          },
+          "docs": "Escalate to next support level."
+        },
+        {
+          "info": {
+            "name": "Reassign incident",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/reassign"
+          },
+          "docs": "Reassign incident to policies or users."
+        },
+        {
+          "info": {
+            "name": "Snooze incident",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/snooze"
+          },
+          "docs": "Snooze incident for specified minutes."
+        },
+        {
+          "info": {
+            "name": "Unacknowledge incident",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/unacknowledge"
+          },
+          "docs": "Unacknowledge incident"
+        },
+        {
+          "info": {
+            "name": "Amend urgency",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/amend-urgency"
+          },
+          "docs": "Update incident urgency level."
+        },
+        {
+          "info": {
+            "name": "Add responders",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/add-responders"
+          },
+          "docs": "Add responders"
+        },
+        {
+          "info": {
+            "name": "Add notes to incident",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/notate"
+          },
+          "docs": "Add notes to incident"
+        },
+        {
+          "info": {
+            "name": "Merge incidents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/merge"
+          },
+          "docs": "Merge incidents"
+        },
+        {
+          "info": {
+            "name": "Unmerge alerts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/unmerge"
+          },
+          "docs": "Separate a merged alert from an incident."
+        },
+        {
+          "info": {
+            "name": "Add subscribers",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/add-subscribers"
+          },
+          "docs": "Add subscribers"
+        },
+        {
+          "info": {
+            "name": "Remove subscribers",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/remove-subscribers"
+          },
+          "docs": "Remove subscribers"
+        },
+        {
+          "info": {
+            "name": "Publish status update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/update-status"
+          },
+          "docs": "Publish status update"
+        },
+        {
+          "info": {
+            "name": "Add business impact",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/add-impact"
+          },
+          "docs": "Mark a business service as impacted by an incident."
+        },
+        {
+          "info": {
+            "name": "Remove business impact",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/remove-impact"
+          },
+          "docs": "Remove business impact"
+        },
+        {
+          "info": {
+            "name": "Run workflow",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/run-workflow"
+          },
+          "docs": "Run workflow"
+        },
+        {
+          "info": {
+            "name": "Edit incident title",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/edit-title"
+          },
+          "docs": "Edit incident title"
+        },
+        {
+          "info": {
+            "name": "Update incident tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://incidents-api.taskcallapp.com/incidents/update-tags"
+          },
+          "docs": "Update incident tags"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
