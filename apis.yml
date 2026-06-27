@@ -53,9 +53,9 @@ common:
     url: https://docs.taskcallapp.com/
   - type: Pricing
     url: https://taskcallapp.com/pricing/
-  - type: SignUp
+  - type: Signup
     url: https://app.us.taskcallapp.com/signup
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.taskcallapp.com/llms.txt
 maintainers:
   - FN: Kin Lane
