@@ -43,6 +43,12 @@ apis:
         url: https://taskcallapp.com/docs/api-access/v1/api-keys
 
 common:
+  - type: TrustCenter
+    url: security/taskcall-trust-center.yml
+  - type: DomainSecurity
+    url: security/taskcall-domain-security.yml
+  - type: Authentication
+    url: authentication/taskcall-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/taskcallapp
   - type: LinkedIn

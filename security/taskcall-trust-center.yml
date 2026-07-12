@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://taskcallapp.com/security
+url: https://taskcallapp.com/security
+certifications:
+- SOC 2
+- HIPAA
+evidence:
+- source: https://taskcallapp.com/security
+  keywords:
+  - soc 2
+  - soc2
+  - hipaa
