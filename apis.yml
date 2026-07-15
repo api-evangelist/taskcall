@@ -43,6 +43,8 @@ apis:
         url: https://taskcallapp.com/docs/api-access/v1/api-keys
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/taskcall-agentic-access.yml
   - type: TrustCenter
     url: security/taskcall-trust-center.yml
   - type: DomainSecurity
