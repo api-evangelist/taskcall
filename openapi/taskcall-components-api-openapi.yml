@@ -1,0 +1,47 @@
+openapi: 3.1.0
+info:
+  title: TaskCall Incidents Components API
+  version: 1.0.0
+  description: 'REST API for creating, updating, and managing incidents in TaskCall.
+
+    Authentication uses API keys passed in the Authorization header as
+
+    "Authorization: token <api_key>", with optional IP allowlisting.
+
+    '
+  contact:
+    name: TaskCall
+    url: https://docs.taskcallapp.com/api-access/v1/incidents-api
+servers:
+- url: https://incidents-api.taskcallapp.com
+  description: EU region
+- url: https://incidents-api.us.taskcallapp.com
+  description: US region
+security:
+- tokenAuth: []
+tags:
+- name: Components
+paths:
+  /list/{componentType}:
+    get:
+      summary: List components
+      description: Retrieve component lists (users, policies, services, etc.).
+      operationId: listComponents
+      tags:
+      - Components
+      parameters:
+      - name: componentType
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Component list
+components:
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'API key formatted as: token <api_key>'
