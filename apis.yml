@@ -9,7 +9,19 @@ description: >-
   exposes a REST API for managing incidents and related resources using
   token-based authentication.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/taskcall.png
 tags:
   - Incident Management
   - On-Call
@@ -23,25 +35,43 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: taskcall:incidents-api
-    name: TaskCall Incidents API
-    description: >-
-      REST API for creating, updating, and managing incidents in TaskCall.
-      Authentication uses API keys passed in the Authorization header as
-      "Authorization: token <api_key>", with optional IP allowlisting for
-      additional security.
-    humanURL: https://docs.taskcallapp.com/api-access/v1/incidents-api
-    baseURL: https://incidents-api.taskcallapp.com
-    tags:
-      - Incidents
-      - Alerts
-      - Triggers
-    properties:
-      - type: Documentation
-        url: https://docs.taskcallapp.com/api-access/v1/incidents-api
-      - type: API Keys
-        url: https://taskcallapp.com/docs/api-access/v1/api-keys
-
+- aid: taskcall:incidents-api
+  name: TaskCall Incidents API
+  description: >-
+    REST API for creating, updating, and managing incidents in TaskCall. Authentication uses API keys
+    passed in the Authorization header as "Authorization: token <api_key>", with optional IP allowlisting
+    for additional security.
+  humanURL: https://docs.taskcallapp.com/api-access/v1/incidents-api
+  baseURL: https://incidents-api.taskcallapp.com
+  tags:
+  - Incidents
+  - Alerts
+  - Triggers
+  properties:
+  - type: Documentation
+    url: https://docs.taskcallapp.com/api-access/v1/incidents-api
+  - type: API Keys
+    url: https://taskcallapp.com/docs/api-access/v1/api-keys
+- aid: taskcall:taskcall-components-api
+  name: TaskCall Components API
+  description: The Components API from TaskCall — 1 operation(s) for components.
+  humanURL: https://docs.taskcallapp.com/api-access/v1/incidents-api
+  baseURL: https://incidents-api.taskcallapp.com
+  tags:
+  - Components
+  properties:
+  - type: OpenAPI
+    url: openapi/taskcall-components-api-openapi.yml
+- aid: taskcall:taskcall-incidents-api
+  name: TaskCall Incidents API
+  description: The Incidents API from TaskCall — 23 operation(s) for incidents.
+  humanURL: https://docs.taskcallapp.com/api-access/v1/incidents-api
+  baseURL: https://incidents-api.taskcallapp.com
+  tags:
+  - Incidents
+  properties:
+  - type: OpenAPI
+    url: openapi/taskcall-incidents-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/taskcall-agentic-access.yml
