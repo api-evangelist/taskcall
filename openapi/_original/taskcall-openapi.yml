@@ -1,0 +1,262 @@
+openapi: 3.1.0
+info:
+  title: TaskCall Incidents API
+  version: "1.0.0"
+  description: |
+    REST API for creating, updating, and managing incidents in TaskCall.
+    Authentication uses API keys passed in the Authorization header as
+    "Authorization: token <api_key>", with optional IP allowlisting.
+  contact:
+    name: TaskCall
+    url: https://docs.taskcallapp.com/api-access/v1/incidents-api
+servers:
+  - url: https://incidents-api.taskcallapp.com
+    description: EU region
+  - url: https://incidents-api.us.taskcallapp.com
+    description: US region
+security:
+  - tokenAuth: []
+paths:
+  /list/{componentType}:
+    get:
+      summary: List components
+      description: Retrieve component lists (users, policies, services, etc.).
+      operationId: listComponents
+      tags:
+        - Components
+      parameters:
+        - name: componentType
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Component list
+  /incidents/create:
+    post:
+      summary: Create incident
+      description: Trigger a new incident.
+      operationId: createIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Incident created
+  /incidents/list:
+    post:
+      summary: List incidents
+      description: List incidents with optional filters.
+      operationId: listIncidents
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Incidents list
+  /incidents/details:
+    post:
+      summary: Get incident details
+      operationId: getIncidentDetails
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Incident details
+  /incidents/alerts:
+    post:
+      summary: Get incident alerts
+      description: Retrieve alerts for an incident.
+      operationId: getIncidentAlerts
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Alerts for incident
+  /incidents/acknowledge:
+    post:
+      summary: Acknowledge incident
+      description: Acknowledge an open incident.
+      operationId: acknowledgeIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Acknowledged
+  /incidents/resolve:
+    post:
+      summary: Resolve incident
+      operationId: resolveIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Resolved
+  /incidents/escalate:
+    post:
+      summary: Escalate incident
+      description: Escalate to next support level.
+      operationId: escalateIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Escalated
+  /incidents/reassign:
+    post:
+      summary: Reassign incident
+      description: Reassign incident to policies or users.
+      operationId: reassignIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Reassigned
+  /incidents/snooze:
+    post:
+      summary: Snooze incident
+      description: Snooze incident for specified minutes.
+      operationId: snoozeIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Snoozed
+  /incidents/unacknowledge:
+    post:
+      summary: Unacknowledge incident
+      operationId: unacknowledgeIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Unacknowledged
+  /incidents/amend-urgency:
+    post:
+      summary: Amend urgency
+      description: Update incident urgency level.
+      operationId: amendUrgency
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Urgency updated
+  /incidents/add-responders:
+    post:
+      summary: Add responders
+      operationId: addResponders
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Responders added
+  /incidents/notate:
+    post:
+      summary: Add notes to incident
+      operationId: notateIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Note added
+  /incidents/merge:
+    post:
+      summary: Merge incidents
+      operationId: mergeIncidents
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Merged
+  /incidents/unmerge:
+    post:
+      summary: Unmerge alerts
+      description: Separate a merged alert from an incident.
+      operationId: unmergeIncident
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Unmerged
+  /incidents/add-subscribers:
+    post:
+      summary: Add subscribers
+      operationId: addSubscribers
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Subscribers added
+  /incidents/remove-subscribers:
+    post:
+      summary: Remove subscribers
+      operationId: removeSubscribers
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Subscribers removed
+  /incidents/update-status:
+    post:
+      summary: Publish status update
+      operationId: updateStatus
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Status updated
+  /incidents/add-impact:
+    post:
+      summary: Add business impact
+      description: Mark a business service as impacted by an incident.
+      operationId: addImpact
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Impact added
+  /incidents/remove-impact:
+    post:
+      summary: Remove business impact
+      operationId: removeImpact
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Impact removed
+  /incidents/run-workflow:
+    post:
+      summary: Run workflow
+      operationId: runWorkflow
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Workflow executed
+  /incidents/edit-title:
+    post:
+      summary: Edit incident title
+      operationId: editTitle
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Title updated
+  /incidents/update-tags:
+    post:
+      summary: Update incident tags
+      operationId: updateTags
+      tags:
+        - Incidents
+      responses:
+        "200":
+          description: Tags updated
+components:
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'API key formatted as: token <api_key>'
+tags:
+  - name: Incidents
+  - name: Components

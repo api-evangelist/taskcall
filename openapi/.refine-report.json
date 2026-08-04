@@ -1,0 +1,16 @@
+{
+  "provider": "taskcall",
+  "sources": [
+    "taskcall-components-api-openapi.yml",
+    "taskcall-incidents-api-openapi.yml"
+  ],
+  "outputs": [
+    "taskcall-components-api-openapi.yml",
+    "taskcall-incidents-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
