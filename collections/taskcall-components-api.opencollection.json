@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TaskCall Incidents Components API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Components",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List components",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://incidents-api.taskcallapp.com/list/:componentType",
+            "params": [
+              {
+                "name": "componentType",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve component lists (users, policies, services, etc.)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,135 @@
+{
+  "item": [
+    {
+      "id": "4b77184b-6f5d-4850-ad43-bcf1e02b4195",
+      "name": "Components",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "220a3d12-b0c5-4c7d-a907-daa27c3bfbbe",
+          "name": "List components",
+          "request": {
+            "name": "List components",
+            "description": {
+              "content": "Retrieve component lists (users, policies, services, etc.).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "list",
+                ":componentType"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "componentType",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f1bebd41-d349-430c-9bd7-ce2cfc649776",
+              "name": "Component list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "list",
+                    ":componentType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "componentType",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://incidents-api.taskcallapp.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "fc02af69-2ebb-41d3-8144-ff9ff2f76840",
+    "name": "TaskCall Incidents Components API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for creating, updating, and managing incidents in TaskCall.\nAuthentication uses API keys passed in the Authorization header as\n\"Authorization: token <api_key>\", with optional IP allowlisting.\n\n\nContact Support:\n Name: TaskCall",
+      "type": "text/plain"
+    }
+  }
+}
