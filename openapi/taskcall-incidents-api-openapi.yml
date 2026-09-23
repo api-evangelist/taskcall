@@ -1,14 +1,12 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: TaskCall Components Incidents API
+  title: TaskCall Incidents API
   version: 1.0.0
   description: 'REST API for creating, updating, and managing incidents in TaskCall.
 
     Authentication uses API keys passed in the Authorization header as
 
-    "Authorization: token <api_key>", with optional IP allowlisting.
-
-    '
+    "Authorization: token ", with optional IP allowlisting.'
   contact:
     name: TaskCall
     url: https://docs.taskcallapp.com/api-access/v1/incidents-api
