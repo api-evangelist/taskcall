@@ -86,6 +86,9 @@ apis:
   - type: OpenAPI
     url: openapi/taskcall-incidents-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/taskcall-capability-edges.yml
+    name: TaskCall Business Capability Map
   - type: AgenticAccess
     url: agentic-access/taskcall-agentic-access.yml
   - type: TrustCenter
