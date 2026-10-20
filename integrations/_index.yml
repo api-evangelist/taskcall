@@ -16,19 +16,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: taskcall-okta-own
-  label: Okta (own)
-  partner: okta
-  partner_name: Okta (own)
-  category: Single Sign-On
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://www.okta.com/integrations/taskcall/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: taskcall-microsoft-teams-own
   label: Microsoft Teams (own)
   partner: microsoft-teams
@@ -42,6 +29,19 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: taskcall-okta-own
+  label: Okta (own)
+  partner: okta
+  partner_name: Okta (own)
+  category: Single Sign-On
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.okta.com/integrations/taskcall/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: taskcall-slack-own
   label: Slack (own)
   partner: slack
@@ -51,6 +51,19 @@
   marketplace: own
   channel: partner-built
   evidence: https://slack.com/marketplace/A01QCAKKUNA-taskcall
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: taskcall-zendesk-own
+  label: Zendesk (own)
+  partner: zendesk
+  partner_name: Zendesk (own)
+  category: IT and HR
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.zendesk.com/marketplace/apps/support/566761/taskcall/
   source: edge
   relationship: platform-app
   status: not-a-workflow
