@@ -7,6 +7,7 @@ checked:
 - slack/integrations/slack-integration-edges.yml
 - zendesk/integrations/zendesk-integration-edges.yml
 - zoom/integrations/zoom-integration-edges.yml
+- atlassian/integrations/atlassian-integration-edges.yml
 source:
 - datadog/integrations/datadog-integration-edges.yml
 - okta/integrations/okta-integration-edges.yml
@@ -119,3 +120,20 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Zoom app
+- partner_name: Atlassian (own)
+  partner: atlassian
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.atlassian.com/vendors/1221561/taskcall
+  mirror_of: atlassian/integrations/atlassian-integration-edges.yml
+  apps:
+  - TaskCall for Jira Cloud
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: Integrations
